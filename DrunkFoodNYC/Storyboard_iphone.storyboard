@@ -298,12 +298,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-rm-Lji"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-rm-Lji">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199" id="MLd-bu-mwW"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IS6-rm-Lji" firstAttribute="leading" secondItem="3gF-h6-tDJ" secondAttribute="leading" type="default" id="NNo-0v-mMa"/>
-                            <constraint firstItem="IS6-rm-Lji" firstAttribute="top" secondItem="3gF-h6-tDJ" secondAttribute="top" type="default" id="XrW-Hn-krb"/>
                             <constraint firstItem="IS6-rm-Lji" firstAttribute="trailing" secondItem="3gF-h6-tDJ" secondAttribute="trailing" type="default" id="l1a-mw-LJM"/>
                             <constraint firstItem="IS6-rm-Lji" firstAttribute="bottom" secondItem="3gF-h6-tDJ" secondAttribute="bottom" type="default" id="snp-dK-A6Y"/>
                         </constraints>

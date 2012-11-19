@@ -39,7 +39,7 @@
 
     }
 }
-/*
+
 -(void) loadDataWith:(NSString *) sortName{
     NSManagedObjectContext *context = [app managedObjectContext];
     
@@ -61,7 +61,7 @@
 	}
     
 }
- */
+ 
 
 -(void) loadData{
     NSManagedObjectContext *context = [app managedObjectContext];
@@ -102,9 +102,9 @@
 
     
     [self loadData];
-   // [self loadDataWith:@"name"];
-//    [self calculateDisData];
- //   [self loadDataWith:@"distance"];
+    [self loadDataWith:@"name"];
+    [self calculateDisData];
+    [self loadDataWith:@"distance"];
     
 
     //UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:1];

@@ -82,10 +82,12 @@
     
 }
 - (IBAction)Food5Btn:(id)sender {
+    selectedFood = @"Asian";
 }
 - (IBAction)Food6Btn:(id)sender {
 }
 - (IBAction)Food7Btn:(id)sender {
+    selectedFood= @"Diner";
 }
 - (IBAction)Food8Btn:(id)sender {
     selectedFood = @"Korean";

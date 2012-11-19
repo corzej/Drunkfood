@@ -16,6 +16,7 @@
 
 #import "MapViewController.h"
 
+
 @interface ChooseTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
     NSMutableArray *entityArray;
