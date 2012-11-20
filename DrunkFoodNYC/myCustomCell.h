@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *openCloseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *closeLabel;
 
 @end

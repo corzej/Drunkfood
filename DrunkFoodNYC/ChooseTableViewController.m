@@ -139,13 +139,21 @@
 //setting cell label values
     switch (openClose) {
         case 1:
-            cell.openCloseLabel.text = @"Close";
+            cell.openCloseLabel.textColor = [UIColor grayColor];
+            cell.openCloseLabel.text = @"OPEN";
+            cell.closeLabel.textColor = [UIColor redColor];
+            cell.closeLabel.text =@"CLOSE";
             break;
         case 2:
-            cell.openCloseLabel.text = @"Open";
+            cell.openCloseLabel.textColor = [UIColor greenColor];
+            cell.openCloseLabel.text = @"OPEN";
+            cell.closeLabel.textColor = [UIColor grayColor];
+            cell.closeLabel.text =@"CLOSE";
             break;
         case 3:
+            cell.openCloseLabel.textColor = [UIColor blueColor];
             cell.openCloseLabel.text = @"Open 24 Hours";
+            [cell.closeLabel removeFromSuperview];
         default:
             break;
     }
@@ -296,6 +304,10 @@
         else{
             return 2;
         }
+    }
+    else if(yesCl <24 && todayOp >currentT){
+        
+        return 1;
     }
     else{
         return 2;

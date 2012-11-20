@@ -255,21 +255,30 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-gK-dkI">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OPEN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-gK-dkI">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="gHZ-iR-iWb"/>
+                                                <constraint firstAttribute="width" constant="109" id="nXV-oF-Q3n"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="town" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-GT-bqK">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="BKF-Sz-RIC"/>
+                                                <constraint firstAttribute="height" constant="21" id="PgY-a3-5qc"/>
                                                 <constraint firstAttribute="width" constant="116" id="Q7D-Jk-QIM"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CLOSE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7G-R0-uDE">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="63" id="WiU-iK-dbA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
@@ -277,18 +286,21 @@
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="cxa-GT-bqK" firstAttribute="top" secondItem="Zlc-gK-dkI" secondAttribute="top" type="default" id="4Q6-FG-5G7"/>
+                                    <constraint firstItem="X7G-R0-uDE" firstAttribute="bottom" secondItem="cxa-GT-bqK" secondAttribute="bottom" type="default" id="2AF-40-kOI"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="top" secondItem="OKh-t9-YxK" secondAttribute="top" constant="3" id="6cH-i2-jaz"/>
-                                    <constraint firstItem="Mfg-R9-o5W" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" constant="211" id="C23-CK-hpf"/>
+                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="trailing" secondItem="OKh-t9-YxK" secondAttribute="trailing" type="default" id="AIE-pt-fTZ"/>
                                     <constraint firstItem="cxa-GT-bqK" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" type="default" id="IJo-7f-7ya"/>
-                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="top" secondItem="OKh-t9-YxK" secondAttribute="top" constant="32" id="LZR-GY-tj3"/>
+                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="leading" secondItem="Mfg-R9-o5W" secondAttribute="leading" type="default" id="Iwt-OL-SbO"/>
+                                    <constraint firstItem="X7G-R0-uDE" firstAttribute="trailing" secondItem="OKh-t9-YxK" secondAttribute="trailing" type="default" id="LDF-0O-P9C"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="top" secondItem="Mfg-R9-o5W" secondAttribute="top" type="default" id="MQ3-oS-a3F"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" type="default" id="Mku-Wx-bA7"/>
-                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="leading" secondItem="Mfg-R9-o5W" secondAttribute="leading" type="default" id="iSp-VX-mCs"/>
-                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="trailing" secondItem="Mfg-R9-o5W" secondAttribute="trailing" type="default" id="w2O-gd-jC8"/>
+                                    <constraint firstAttribute="bottom" secondItem="cxa-GT-bqK" secondAttribute="bottom" constant="11" id="SF5-K1-oJO"/>
+                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="top" secondItem="OKh-t9-YxK" secondAttribute="top" constant="29" id="b2P-S1-Kru"/>
+                                    <constraint firstItem="X7G-R0-uDE" firstAttribute="top" secondItem="cxa-GT-bqK" secondAttribute="top" type="default" id="oP9-qG-EOu"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="areaLabel" destination="cxa-GT-bqK" id="c4i-Wu-Isa"/>
+                                    <outlet property="closeLabel" destination="X7G-R0-uDE" id="whH-3w-wIq"/>
                                     <outlet property="distanceLabel" destination="Mfg-R9-o5W" id="xg3-nO-JiX"/>
                                     <outlet property="openCloseLabel" destination="Zlc-gK-dkI" id="b5J-cQ-duK"/>
                                     <outlet property="storeNameLabel" destination="Dcv-Df-yf5" id="E9v-ea-WC1"/>
@@ -412,6 +424,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/myCustomCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="areaLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="closeLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="openCloseLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="storeNameLabel" candidateClass="UILabel"/>
