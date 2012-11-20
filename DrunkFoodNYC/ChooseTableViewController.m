@@ -139,6 +139,7 @@
 //setting cell label values
     switch (openClose) {
         case 1:
+            
             cell.openCloseLabel.textColor = [UIColor grayColor];
             cell.openCloseLabel.text = @"OPEN";
             cell.closeLabel.textColor = [UIColor redColor];
@@ -152,14 +153,15 @@
             break;
         case 3:
             cell.openCloseLabel.textColor = [UIColor blueColor];
-            cell.openCloseLabel.text = @"Open 24 Hours";
-            [cell.closeLabel removeFromSuperview];
+            cell.openCloseLabel.text = @"OPEN";
+            cell.closeLabel.textColor = [UIColor blueColor];
+            cell.closeLabel.text =@"24 hours";
+            break;
         default:
             break;
     }
     cell.storeNameLabel.text = [object valueForKey:@"name"];
     cell.areaLabel.text = [object valueForKey:@"area"];
-
     cell.distanceLabel.text = [NSString stringWithFormat:@"%.1lf miles", distance];
     return cell;
     
@@ -169,18 +171,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSManagedObject *object = (NSManagedObject *)[entityArray objectAtIndex:path.row];
+    MapViewController *dvc = [[self storyboard] instantiateViewControllerWithIdentifier:@"toMap"];
+    CLLocationCoordinate2D abc;
+    abc.latitude = [[object valueForKey:@"latitude"] doubleValue];
+    abc.longitude = [[object valueForKey:@"longitude"] doubleValue] ;
     
-   // NSManagedObject *object = (NSManagedObject *)[entityArray objectAtIndex:indexPath.row];
-    
-    // Navigation logic may go here. Create and push another view controller.
-    
-     //MapViewController *detailViewController = [[MapViewController alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     //[self.navigationController pushViewController:detailViewController animated:YES];
-    
-  //  MapViewController *detailViewController = [segue destinationViewController];
-  //  detailViewController.recieveInfo = selectedFood;
+    dvc.zoomLocation =abc;
+     */
 }
 
 #pragma mark - CLLocation
@@ -199,15 +199,16 @@
 #pragma makr - nextview
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    MapViewController *detailViewController = [segue destinationViewController];
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     NSManagedObject *object = (NSManagedObject *)[entityArray objectAtIndex:path.row];
     
-    MapViewController *detailViewController = [segue destinationViewController];
     CLLocationCoordinate2D abc;
     abc.latitude = [[object valueForKey:@"latitude"] doubleValue];
     abc.longitude = [[object valueForKey:@"longitude"] doubleValue] ;
-
+    
     detailViewController.zoomLocation =abc;
+    detailViewController.storeName = [object valueForKey:@"name"];
 
 }
 

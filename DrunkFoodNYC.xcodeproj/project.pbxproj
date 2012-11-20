@@ -40,6 +40,7 @@
 		299779461648AF6100E5B79B /* CoreDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 299779451648AF6100E5B79B /* CoreDateHelper.m */; };
 		2997794A1648B1AF00E5B79B /* myCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 299779491648B1AF00E5B79B /* myCustomCell.m */; };
 		29AB95C11648C5E80072CB7C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AB95C01648C5E80072CB7C /* CoreLocation.framework */; };
+		29E59853165B68EC002877E8 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E59852165B68EC002877E8 /* MapPin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		299779481648B1AF00E5B79B /* myCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCustomCell.h; sourceTree = "<group>"; };
 		299779491648B1AF00E5B79B /* myCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCustomCell.m; sourceTree = "<group>"; };
 		29AB95C01648C5E80072CB7C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		29E59851165B68EC002877E8 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		29E59852165B68EC002877E8 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,8 @@
 			children = (
 				2933BC2816542CFF002B9C4E /* MapViewController.h */,
 				2933BC2916542CFF002B9C4E /* MapViewController.m */,
+				29E59851165B68EC002877E8 /* MapPin.h */,
+				29E59852165B68EC002877E8 /* MapPin.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				296AD41C1659A44400E28562 /* Halal.m in Sources */,
 				296AD41F1659A44400E28562 /* Hfh.m in Sources */,
 				296AD4221659A44400E28562 /* Friedchicken.m in Sources */,
+				29E59853165B68EC002877E8 /* MapPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
