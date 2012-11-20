@@ -15,23 +15,26 @@
 #import "myCustomCell.h"
 
 #import "MapViewController.h"
+#import <iAd/iAd.h>
 
-
-@interface ChooseTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate>{
+@interface ChooseTableViewController : UITableViewController <UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate,CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
     NSMutableArray *entityArray;
 	NSPredicate *entitySearchPredicate;
 }
+//tableview
+@property (strong, nonatomic) IBOutlet UITableView *myTable;
+//coreLocation
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
 @property (nonatomic, strong) id  recieveInfo;
-@property (nonatomic, retain) CLLocationManager *locationManager;  
 // CoreData
 @property (nonatomic, strong) NSString * navTitle;
 @property (nonatomic, retain) AppDelegate *app;
 @property (strong, nonatomic) NSString *content;
 @property (nonatomic, retain) NSMutableArray *entityArray;
 @property (nonatomic, retain) NSPredicate *entitySearchPredicate;
-
-
--(void) recordIt;
+//iad
+@property (strong, nonatomic) IBOutlet ADBannerView *ad;
 
 @end

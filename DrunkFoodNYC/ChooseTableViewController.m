@@ -13,9 +13,17 @@
 
 
 @implementation ChooseTableViewController
-@synthesize app,content,entityArray,entitySearchPredicate;
-@synthesize recieveInfo,locationManager;
+//tableview
+@synthesize myTable;
+//corelocation
+@synthesize locationManager;
+
+@synthesize recieveInfo;
+//coreData
 @synthesize navTitle;
+@synthesize content,entityArray,entitySearchPredicate;
+@synthesize app;
+@synthesize ad;
 #define METERS_PER_MILE 1609.344
 
 
@@ -27,65 +35,6 @@
     }
     return self;
 }
--(void) calculateDisData{
-    for (int a = 0; a <[entityArray count]; a++) {
-        NSManagedObject *object = (NSManagedObject *)[entityArray objectAtIndex:a];
-    
-        //geting distance between me and store
-        CLLocation *location1 = [[CLLocation alloc] initWithLatitude:[[object valueForKey:@"latitude"]doubleValue] longitude:[[object valueForKey:@"longitude"]doubleValue]];
-        CLLocation *location2 = [[CLLocation alloc] initWithLatitude:locationManager.location.coordinate.latitude longitude:locationManager.location.coordinate.longitude];
-        double distance = ([location1 distanceFromLocation:location2]/1609.34);
-        [object setValue:[NSNumber numberWithDouble:distance] forKey:@"distance"];
-
-    }
-}
-
--(void) loadDataWith:(NSString *) sortName{
-    NSManagedObjectContext *context = [app managedObjectContext];
-    
-	if(entitySearchPredicate == nil)
-	{
-		// Use the CoreDataHelper class to get all objects of the given
-		// type sorted by the "Name" key
-		NSMutableArray* mutableFetchResults = [CoreDateHelper getObjectsFromContext: recieveInfo :sortName :YES :context];
-        
-		self.entityArray = mutableFetchResults;
-        
-	}
-	else
-	{
-		// Use the CoreDataHelper class to search for objects using
-		// a given predicate, the result is sorted by the "Name" key
-		NSMutableArray* mutableFetchResults = [CoreDateHelper searchObjectsInContext: recieveInfo :entitySearchPredicate :sortName :YES :context];
-		self.entityArray = mutableFetchResults;
-	}
-    
-}
- 
-
--(void) loadData{
-    NSManagedObjectContext *context = [app managedObjectContext];
-    
-	if(entitySearchPredicate == nil)
-	{
-		// Use the CoreDataHelper class to get all objects of the given
-		// type sorted by the "Name" key
-		NSMutableArray* mutableFetchResults = [CoreDateHelper getObjectsFromContext: recieveInfo :@"name" :YES :context];
-        
-		self.entityArray = mutableFetchResults;
-        
-	}
-	else
-	{
-		// Use the CoreDataHelper class to search for objects using
-		// a given predicate, the result is sorted by the "Name" key
-		NSMutableArray* mutableFetchResults = [CoreDateHelper searchObjectsInContext: recieveInfo :entitySearchPredicate :@"name" :YES :context];
-		self.entityArray = mutableFetchResults;
-	}
-    
-}
-
-
 
 - (void)viewDidLoad
 {
@@ -98,18 +47,15 @@
         locationManager.desiredAccuracy = kCLLocationAccuracyBest; // 10 m
         [locationManager startUpdatingLocation];
     }
+//to use core data
     app = [[UIApplication sharedApplication] delegate];
 
-    
-    [self loadData];
+//load the data for coredata first to sort by distance
     [self loadDataWith:@"name"];
     [self calculateDisData];
     [self loadDataWith:@"distance"];
-    
 
-    //UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:1];
-    //navCon.navigationItem.title = navTitle;
-    
+//name of kind of food
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 30)];
     titleLabel.textColor = [UIColor redColor];
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -118,12 +64,9 @@
     [titleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:21]];
     [titleLabel sizeToFit];
     [self.navigationItem setTitleView:titleLabel];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+// display iad
+    self.tableView.tableFooterView = ad;
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,7 +91,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
     //constructing Cell
     static NSString *CellIdentifier = @"myCell";
     myCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -160,64 +102,53 @@
     CLLocation *location1 = [[CLLocation alloc] initWithLatitude:[[object valueForKey:@"latitude"]doubleValue] longitude:[[object valueForKey:@"longitude"]doubleValue]];
     CLLocation *location2 = [[CLLocation alloc] initWithLatitude:locationManager.location.coordinate.latitude longitude:locationManager.location.coordinate.longitude];
     double distance = ([location1 distanceFromLocation:location2]/1609.34);
-    
-    
-    //getting current time
+
+//getting current time and day
     NSDate *now = [NSDate date];
+    int openClose;
+    int weekday = [self checkDay:now];
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"HH";
-    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    int nowNum =[[dateFormatter stringFromDate:now]intValue];
-    NSLog(@"The Current Time is %@",[dateFormatter stringFromDate:now]);
-    
-    //getting day of week 1 =sunday
-    int weekday = [[[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:now] weekday];
-    //getting data with day
-    int open, close;
+    NSLog(@"when do you close: %f", [[object valueForKey:@"monC"]doubleValue] );
+
     switch (weekday) {
         case 1:
-            open = [[object valueForKey:@"sunO"]intValue];
-            close =[[object valueForKey:@"sunC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"satC"]doubleValue] todayOpen:[[object valueForKey:@"sunO"]doubleValue] todayClose:[[object valueForKey:@"sunC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 2:
-            open = [[object valueForKey:@"monO"]intValue];
-            close =[[object valueForKey:@"monC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"sunC"]doubleValue] todayOpen:[[object valueForKey:@"monO"]doubleValue] todayClose:[[object valueForKey:@"monC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 3:
-            open = [[object valueForKey:@"tueO"]intValue];
-            close =[[object valueForKey:@"tueC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"monC"]doubleValue] todayOpen:[[object valueForKey:@"tueO"]doubleValue] todayClose:[[object valueForKey:@"tueC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 4:
-            open = [[object valueForKey:@"wedO"]intValue];
-            close =[[object valueForKey:@"wedC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"tueC"]doubleValue] todayOpen:[[object valueForKey:@"wedO"]doubleValue] todayClose:[[object valueForKey:@"wedC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 5:
-            open = [[object valueForKey:@"thuO"]intValue];
-            close =[[object valueForKey:@"thuC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"wedC"]doubleValue] todayOpen:[[object valueForKey:@"thuO"]doubleValue] todayClose:[[object valueForKey:@"thuC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 6:
-            open = [[object valueForKey:@"friO"]intValue];
-            close =[[object valueForKey:@"friC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"thuC"]doubleValue] todayOpen:[[object valueForKey:@"friO"]doubleValue] todayClose:[[object valueForKey:@"friC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         case 7:
-            open = [[object valueForKey:@"satO"]intValue];
-            close =[[object valueForKey:@"satC"]intValue];
+            openClose = [self checkWithYesterdayClose:[[object valueForKey:@"friC"]doubleValue] todayOpen:[[object valueForKey:@"satO"]doubleValue] todayClose:[[object valueForKey:@"satC"]doubleValue] currentTime:[self getCurrentTime:now]];
             break;
         default:
             break;
     }
     
-    if (open ==0 && close ==0) {
-        cell.openCloseLabel.text =@"Open 24Hours";
+//setting cell label values
+    switch (openClose) {
+        case 1:
+            cell.openCloseLabel.text = @"Close";
+            break;
+        case 2:
+            cell.openCloseLabel.text = @"Open";
+            break;
+        case 3:
+            cell.openCloseLabel.text = @"Open 24 Hours";
+        default:
+            break;
     }
-    else if(open >nowNum){
-        cell.openCloseLabel.text =[NSString stringWithFormat:@"close. will open in %i",(open-nowNum)];
-    }
-    else if (open <=nowNum){
-        cell.openCloseLabel.text =@"Open";
-    }
-    //setting cell label values
     cell.storeNameLabel.text = [object valueForKey:@"name"];
     cell.areaLabel.text = [object valueForKey:@"area"];
 
@@ -225,45 +156,6 @@
     return cell;
     
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -283,8 +175,6 @@
   //  detailViewController.recieveInfo = selectedFood;
 }
 
-
-
 #pragma mark - CLLocation
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
@@ -297,8 +187,6 @@
 
 
 }
-
-
 
 #pragma makr - nextview
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -313,6 +201,105 @@
 
     detailViewController.zoomLocation =abc;
 
+}
+
+#pragma makr -scrollview
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGRect iAdFrame = ad.frame;
+    CGFloat newOriginY =  myTable.contentOffset.y + myTable.frame.size.height - iAdFrame.size.height;
+    CGRect newIAdFrame = CGRectMake(iAdFrame.origin.x, newOriginY, iAdFrame.size.width, iAdFrame.size.height);
+    ad.frame = newIAdFrame;
+}
+
+#pragma makr- data methods
+
+-(void) calculateDisData{
+    for (int a = 0; a <[entityArray count]; a++) {
+        NSManagedObject *object = (NSManagedObject *)[entityArray objectAtIndex:a];
+        
+        //geting distance between me and store
+        CLLocation *location1 = [[CLLocation alloc] initWithLatitude:[[object valueForKey:@"latitude"]doubleValue] longitude:[[object valueForKey:@"longitude"]doubleValue]];
+        CLLocation *location2 = [[CLLocation alloc] initWithLatitude:locationManager.location.coordinate.latitude longitude:locationManager.location.coordinate.longitude];
+        double distance = ([location1 distanceFromLocation:location2]/1609.34);
+        [object setValue:[NSNumber numberWithDouble:distance] forKey:@"distance"];
+        
+    }
+}
+
+-(void) loadDataWith:(NSString *) sortName{
+    NSManagedObjectContext *context = [app managedObjectContext];
+    
+	if(entitySearchPredicate == nil)
+	{
+		// Use the CoreDataHelper class to get all objects of the given
+		// type sorted by the "Name" key
+		NSMutableArray* mutableFetchResults = [CoreDateHelper getObjectsFromContext: recieveInfo :sortName :YES :context];
+        
+		self.entityArray = mutableFetchResults;
+        
+	}
+	else
+	{
+		// Use the CoreDataHelper class to search for objects using
+		// a given predicate, the result is sorted by the "Name" key
+		NSMutableArray* mutableFetchResults = [CoreDateHelper searchObjectsInContext: recieveInfo :entitySearchPredicate :sortName :YES :context];
+		self.entityArray = mutableFetchResults;
+	}
+    
+}
+
+#pragma -makr - check day and time
+
+-(double) getCurrentTime:(NSDate *)now{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    int nowNumHr =[[dateFormatter stringFromDate:now]intValue];
+    dateFormatter.dateFormat =@"mm";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    int nowNumMin =[[dateFormatter stringFromDate:now]intValue];
+    
+    return (double)(nowNumHr + (double)nowNumMin/60);
+}
+-(int) checkDay:(NSDate *)now{
+
+    //getting day of week 1 =sunday
+    int weekday = [[[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:now] weekday];
+    
+    return weekday;
+}
+-(int) checkWithYesterdayClose:(double)yesCl todayOpen:(double)todayOp todayClose:(double)todayCl currentTime:(double)currentT{
+//close =1 , open =2, 24open =3
+    if(todayOp == 0){
+        //24 hour open
+        return 3;
+    }
+    else if(todayOp ==-1){
+        //close
+        return 1;
+    }
+    else if(0<=yesCl && yesCl <12 ){
+        if (yesCl <= currentT && currentT<todayOp) {
+            //close
+            return 1;
+        }
+        
+        else if( 12<=todayCl && todayCl <24){
+            if (todayCl <=currentT) {
+                return 1;
+            }
+            else{
+                return 2;
+            }
+        }
+        
+        else{
+            return 2;
+        }
+    }
+    else{
+        return 2;
+    }
 }
 
 @end

@@ -49,7 +49,6 @@
     [titleLabel sizeToFit];
 
     [self.navigationItem setTitleView:titleLabel];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,20 +78,22 @@
     selectedFood = @"Taco";
 }
 - (IBAction)Food4Btn:(id)sender {
-    
+    selectedFood = @"Fastfood";
 }
 - (IBAction)Food5Btn:(id)sender {
     selectedFood = @"Asian";
 }
 - (IBAction)Food6Btn:(id)sender {
+    selectedFood = @"Falafel";
 }
 - (IBAction)Food7Btn:(id)sender {
     selectedFood= @"Diner";
 }
 - (IBAction)Food8Btn:(id)sender {
-    selectedFood = @"Korean";
+    selectedFood = @"Friedchicken";
 }
 - (IBAction)Food9Btn:(id)sender {
+    selectedFood = @"Halal";
 }
 
 

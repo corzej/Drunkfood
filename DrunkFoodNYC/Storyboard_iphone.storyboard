@@ -16,7 +16,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="Hfw-do-czm"/>
-                                    <constraint firstAttribute="height" constant="138" id="kyQ-Dr-udD"/>
+                                    <constraint firstAttribute="height" constant="120" id="mhW-IQ-rd9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="Pizza.png">
@@ -34,7 +34,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30H-xu-O8R">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="1b5-lD-jPg"/>
+                                    <constraint firstAttribute="height" constant="120" id="Bs0-gM-mhp"/>
                                     <constraint firstAttribute="width" constant="106" id="cR0-z8-gyH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
@@ -71,8 +71,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6X-JL-xg7">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="138" id="2qI-qI-3dw"/>
                                     <constraint firstAttribute="width" constant="106" id="Ypf-La-17B"/>
+                                    <constraint firstAttribute="height" constant="120" id="o8h-96-0Ay"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Fast Food">
@@ -120,7 +120,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqB-a7-5OZ">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="138" id="pCR-dc-0lw"/>
+                                    <constraint firstAttribute="height" constant="120" id="Nru-9d-oCO"/>
+                                    <constraint firstAttribute="width" constant="106" id="ynU-c9-WSj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Diner">
@@ -152,6 +153,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-6N-avd">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Slw-AS-XYy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,6 +169,15 @@
                                     <segue destination="7IM-CI-g9o" kind="push" identifier="Foood9ToCell" id="Gt7-mG-Iao"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Co-P4-yfl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9fQ-J5-fsA"/>
+                                </constraints>
+                                <requiredContentSizeIdentifiers>
+                                    <string>ADBannerContentSizeLandscape</string>
+                                    <string>ADBannerContentSizePortrait</string>
+                                </requiredContentSizeIdentifiers>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -172,33 +185,37 @@
                             <constraint firstItem="1Jv-Cv-SYF" firstAttribute="leading" secondItem="30H-xu-O8R" secondAttribute="leading" type="default" id="3Br-sD-srV"/>
                             <constraint firstItem="5ZM-iD-9Wj" firstAttribute="trailing" secondItem="Y6X-JL-xg7" secondAttribute="trailing" type="default" id="3yJ-0j-940"/>
                             <constraint firstItem="Y6X-JL-xg7" firstAttribute="leading" secondItem="AsL-7n-apL" secondAttribute="leading" type="default" id="6JF-HZ-gzP"/>
-                            <constraint firstItem="5ZM-iD-9Wj" firstAttribute="bottom" secondItem="30H-xu-O8R" secondAttribute="bottom" type="default" id="89i-5Q-KjP"/>
+                            <constraint firstItem="6cd-h3-Wcq" firstAttribute="bottom" secondItem="PqB-a7-5OZ" secondAttribute="bottom" type="default" id="8LF-jh-Lc2"/>
                             <constraint firstItem="1Jv-Cv-SYF" firstAttribute="trailing" secondItem="6cd-h3-Wcq" secondAttribute="trailing" type="default" id="Czi-lH-nD7"/>
+                            <constraint firstItem="C86-M6-gdG" firstAttribute="top" secondItem="1Jv-Cv-SYF" secondAttribute="top" type="default" id="E9t-bK-2fB"/>
+                            <constraint firstItem="DIb-v2-XI9" firstAttribute="bottom" secondItem="30H-xu-O8R" secondAttribute="bottom" type="default" id="G9u-9l-h6Q"/>
                             <constraint firstItem="30H-xu-O8R" firstAttribute="top" secondItem="AsL-7n-apL" secondAttribute="top" type="default" id="Gvp-37-Rwk"/>
-                            <constraint firstItem="30H-xu-O8R" firstAttribute="bottom" secondItem="DIb-v2-XI9" secondAttribute="bottom" type="default" id="Icu-aa-XJa"/>
+                            <constraint firstItem="6cd-h3-Wcq" firstAttribute="top" secondItem="1Jv-Cv-SYF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HFn-X5-V5L"/>
+                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="top" secondItem="Y6X-JL-xg7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="JED-lZ-lhY"/>
+                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="top" secondItem="1Jv-Cv-SYF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M28-N3-w8H"/>
                             <constraint firstItem="TvE-6N-avd" firstAttribute="trailing" secondItem="AsL-7n-apL" secondAttribute="trailing" type="default" id="NBr-at-igd"/>
                             <constraint firstItem="C86-M6-gdG" firstAttribute="leading" secondItem="TvE-6N-avd" secondAttribute="leading" type="default" id="RNd-Ux-h5f"/>
-                            <constraint firstItem="1Jv-Cv-SYF" firstAttribute="top" secondItem="Y6X-JL-xg7" secondAttribute="top" type="default" id="RpY-9E-bxe"/>
-                            <constraint firstItem="Y6X-JL-xg7" firstAttribute="trailing" secondItem="PqB-a7-5OZ" secondAttribute="trailing" type="default" id="Sy6-dz-Ghx"/>
-                            <constraint firstItem="TvE-6N-avd" firstAttribute="bottom" secondItem="AsL-7n-apL" secondAttribute="bottom" type="default" id="anl-3o-pgQ"/>
-                            <constraint firstItem="6cd-h3-Wcq" firstAttribute="top" secondItem="TvE-6N-avd" secondAttribute="top" type="default" id="cnc-r3-u1q"/>
+                            <constraint firstItem="8Co-P4-yfl" firstAttribute="trailing" secondItem="AsL-7n-apL" secondAttribute="trailing" type="default" id="Rgh-mp-yaH"/>
+                            <constraint firstAttribute="bottom" secondItem="6cd-h3-Wcq" secondAttribute="bottom" constant="48" id="TJX-hn-nOH"/>
+                            <constraint firstItem="8Co-P4-yfl" firstAttribute="leading" secondItem="AsL-7n-apL" secondAttribute="leading" type="default" id="ck3-7H-23q"/>
+                            <constraint firstItem="8Co-P4-yfl" firstAttribute="bottom" secondItem="AsL-7n-apL" secondAttribute="bottom" type="default" id="d7u-co-Nj3"/>
                             <constraint firstItem="DIb-v2-XI9" firstAttribute="trailing" secondItem="AsL-7n-apL" secondAttribute="trailing" type="default" id="dCn-Ei-ZNV"/>
                             <constraint firstItem="1Jv-Cv-SYF" firstAttribute="leading" secondItem="6cd-h3-Wcq" secondAttribute="leading" type="default" id="hR4-C5-U1b"/>
-                            <constraint firstItem="1Jv-Cv-SYF" firstAttribute="top" secondItem="C86-M6-gdG" secondAttribute="top" type="default" id="iph-D5-oly"/>
-                            <constraint firstItem="Y6X-JL-xg7" firstAttribute="centerY" secondItem="AsL-7n-apL" secondAttribute="centerY" type="default" id="jua-Y1-Bfc"/>
-                            <constraint firstItem="6cd-h3-Wcq" firstAttribute="bottom" secondItem="AsL-7n-apL" secondAttribute="bottom" type="default" id="mmO-wy-hlq"/>
-                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="bottom" secondItem="AsL-7n-apL" secondAttribute="bottom" type="default" id="ovv-Bz-bwm"/>
+                            <constraint firstItem="C86-M6-gdG" firstAttribute="bottom" secondItem="1Jv-Cv-SYF" secondAttribute="bottom" type="default" id="hhE-YD-auL"/>
+                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="centerX" secondItem="5ZM-iD-9Wj" secondAttribute="centerX" type="default" id="hhf-od-lDi"/>
+                            <constraint firstAttribute="bottom" secondItem="TvE-6N-avd" secondAttribute="bottom" constant="38" id="kcK-3y-n8w"/>
+                            <constraint firstItem="5ZM-iD-9Wj" firstAttribute="top" secondItem="AsL-7n-apL" secondAttribute="top" constant="2" id="lpB-FK-IqR"/>
                             <constraint firstItem="DIb-v2-XI9" firstAttribute="top" secondItem="AsL-7n-apL" secondAttribute="top" type="default" id="pgV-99-TP9"/>
                             <constraint firstItem="1Jv-Cv-SYF" firstAttribute="trailing" secondItem="30H-xu-O8R" secondAttribute="trailing" type="default" id="plN-it-G4a"/>
-                            <constraint firstItem="1Jv-Cv-SYF" firstAttribute="centerX" secondItem="AsL-7n-apL" secondAttribute="centerX" type="default" id="qHJ-so-cKV"/>
-                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="leading" secondItem="AsL-7n-apL" secondAttribute="leading" type="default" id="tJO-pT-Sa0"/>
-                            <constraint firstItem="C86-M6-gdG" firstAttribute="bottom" secondItem="1Jv-Cv-SYF" secondAttribute="bottom" type="default" id="ut1-LF-BZv"/>
-                            <constraint firstItem="PqB-a7-5OZ" firstAttribute="top" secondItem="6cd-h3-Wcq" secondAttribute="top" type="default" id="vqC-eR-yfW"/>
+                            <constraint firstItem="8Co-P4-yfl" firstAttribute="centerX" secondItem="6cd-h3-Wcq" secondAttribute="centerX" type="default" id="r7G-Kg-eMi"/>
+                            <constraint firstItem="1Jv-Cv-SYF" firstAttribute="top" secondItem="Y6X-JL-xg7" secondAttribute="top" type="default" id="rZI-T9-bFO"/>
                             <constraint firstItem="C86-M6-gdG" firstAttribute="leading" secondItem="DIb-v2-XI9" secondAttribute="leading" type="default" id="z5V-pL-yNs"/>
-                            <constraint firstItem="Y6X-JL-xg7" firstAttribute="bottom" secondItem="1Jv-Cv-SYF" secondAttribute="bottom" type="default" id="z8Q-TC-6Nj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLC-Hb-Bas"/>
+                    <connections>
+                        <outlet property="ad" destination="8Co-P4-yfl" id="3Tu-PM-BeM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1D-EG-tDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,8 +248,8 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-R9-o5W">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="91" id="JFo-ZH-ooP"/>
                                                 <constraint firstAttribute="height" constant="28" id="dtj-4e-0JW"/>
+                                                <constraint firstAttribute="width" constant="139" id="j5z-4y-HgJ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,7 +258,6 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-gK-dkI">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="gHZ-iR-iWb"/>
-                                                <constraint firstAttribute="width" constant="139" id="kNX-wz-RAQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -263,12 +279,13 @@
                                 <constraints>
                                     <constraint firstItem="cxa-GT-bqK" firstAttribute="top" secondItem="Zlc-gK-dkI" secondAttribute="top" type="default" id="4Q6-FG-5G7"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="top" secondItem="OKh-t9-YxK" secondAttribute="top" constant="3" id="6cH-i2-jaz"/>
+                                    <constraint firstItem="Mfg-R9-o5W" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" constant="211" id="C23-CK-hpf"/>
                                     <constraint firstItem="cxa-GT-bqK" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" type="default" id="IJo-7f-7ya"/>
+                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="top" secondItem="OKh-t9-YxK" secondAttribute="top" constant="32" id="LZR-GY-tj3"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="top" secondItem="Mfg-R9-o5W" secondAttribute="top" type="default" id="MQ3-oS-a3F"/>
                                     <constraint firstItem="Dcv-Df-yf5" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" type="default" id="Mku-Wx-bA7"/>
-                                    <constraint firstAttribute="bottom" secondItem="cxa-GT-bqK" secondAttribute="bottom" constant="11" id="Tbn-2H-W8f"/>
-                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="leading" secondItem="OKh-t9-YxK" secondAttribute="leading" constant="211" id="feu-aM-Qqw"/>
                                     <constraint firstItem="Zlc-gK-dkI" firstAttribute="leading" secondItem="Mfg-R9-o5W" secondAttribute="leading" type="default" id="iSp-VX-mCs"/>
+                                    <constraint firstItem="Zlc-gK-dkI" firstAttribute="trailing" secondItem="Mfg-R9-o5W" secondAttribute="trailing" type="default" id="w2O-gd-jC8"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="areaLabel" destination="cxa-GT-bqK" id="c4i-Wu-Isa"/>
@@ -285,8 +302,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oaK-c7-5Zh" customClass="c"/>
+                    <connections>
+                        <outlet property="ad" destination="mNX-I3-HvT" id="dM4-nU-rGq"/>
+                        <outlet property="myTable" destination="MFa-v0-ZtT" id="l65-rf-3YM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjd-Tf-oba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mNX-I3-HvT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <requiredContentSizeIdentifiers>
+                        <string>ADBannerContentSizeLandscape</string>
+                        <string>ADBannerContentSizePortrait</string>
+                    </requiredContentSizeIdentifiers>
+                </adBannerView>
             </objects>
             <point key="canvasLocation" x="1265" y="98"/>
         </scene>
@@ -330,7 +359,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0uw-hp-OJr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.60969344430000005" green="0.043909354909999997" blue="0.079875069189999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -350,6 +379,10 @@
     <classes>
         <class className="ChooseTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChooseTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ad" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="FoodChooseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodChooseViewController.h"/>
@@ -363,6 +396,7 @@
                 <relationship kind="action" name="Food7Btn:"/>
                 <relationship kind="action" name="Food8Btn:"/>
                 <relationship kind="action" name="Food9Btn:"/>
+                <relationship kind="outlet" name="ad" candidateClass="ADBannerView"/>
             </relationships>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
@@ -390,6 +424,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uKP-6R-C1l"/>
+        <segue reference="xwu-MD-r4r"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -117,6 +117,24 @@
 		291239A6164C41E800CCF28A /* Data Classes */ = {
 			isa = PBXGroup;
 			children = (
+				296AD4111659A44400E28562 /* Pizza.h */,
+				296AD4121659A44400E28562 /* Pizza.m */,
+				296AD41D1659A44400E28562 /* Hfh.h */,
+				296AD41E1659A44400E28562 /* Hfh.m */,
+				296AD4081659A42C00E28562 /* Taco.h */,
+				296AD4091659A42C00E28562 /* Taco.m */,
+				296AD40B1659A44300E28562 /* Fastfood.h */,
+				296AD40C1659A44300E28562 /* Fastfood.m */,
+				296AD40E1659A44400E28562 /* Asian.h */,
+				296AD40F1659A44400E28562 /* Asian.m */,
+				296AD4141659A44400E28562 /* Falafel.h */,
+				296AD4151659A44400E28562 /* Falafel.m */,
+				296AD4171659A44400E28562 /* Diner.h */,
+				296AD4181659A44400E28562 /* Diner.m */,
+				296AD4201659A44400E28562 /* Friedchicken.h */,
+				296AD4211659A44400E28562 /* Friedchicken.m */,
+				296AD41A1659A44400E28562 /* Halal.h */,
+				296AD41B1659A44400E28562 /* Halal.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -125,9 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				294604AD16448D3200146B0C /* Storyboard_iphone.storyboard */,
-				2985852C1656B57A00F4E917 /* Chinese_Korean.png */,
-				2985852D1656B57A00F4E917 /* Falafel.png */,
-				29030E4C1654834D001D2056 /* Pizza.png */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -135,30 +150,20 @@
 		291239A8164C421C00CCF28A /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				293A5038165AD5C7003BD924 /* DrunkFoodNYC.sqlite */,
 				2946049C16448A3700146B0C /* AppDelegate.h */,
 				2946049D16448A3700146B0C /* AppDelegate.m */,
-				296AD4051659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld */,
-				296AD4201659A44400E28562 /* Friedchicken.h */,
-				296AD4211659A44400E28562 /* Friedchicken.m */,
-				296AD41D1659A44400E28562 /* Hfh.h */,
-				296AD41E1659A44400E28562 /* Hfh.m */,
-				296AD41A1659A44400E28562 /* Halal.h */,
-				296AD41B1659A44400E28562 /* Halal.m */,
-				296AD4171659A44400E28562 /* Diner.h */,
-				296AD4181659A44400E28562 /* Diner.m */,
-				296AD4141659A44400E28562 /* Falafel.h */,
-				296AD4151659A44400E28562 /* Falafel.m */,
-				296AD4111659A44400E28562 /* Pizza.h */,
-				296AD4121659A44400E28562 /* Pizza.m */,
-				296AD40E1659A44400E28562 /* Asian.h */,
-				296AD40F1659A44400E28562 /* Asian.m */,
-				296AD40B1659A44300E28562 /* Fastfood.h */,
-				296AD40C1659A44300E28562 /* Fastfood.m */,
-				296AD4081659A42C00E28562 /* Taco.h */,
-				296AD4091659A42C00E28562 /* Taco.m */,
 			);
 			name = Delegate;
+			sourceTree = "<group>";
+		};
+		293A5040165B108F003BD924 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				2985852C1656B57A00F4E917 /* Chinese_Korean.png */,
+				2985852D1656B57A00F4E917 /* Falafel.png */,
+				29030E4C1654834D001D2056 /* Pizza.png */,
+			);
+			name = Img;
 			sourceTree = "<group>";
 		};
 		2946047C16448A3700146B0C = {
@@ -195,8 +200,8 @@
 		2946049316448A3700146B0C /* DrunkFoodNYC */ = {
 			isa = PBXGroup;
 			children = (
-				291239A7164C420600CCF28A /* StoryBoards */,
 				291239A8164C421C00CCF28A /* Delegate */,
+				291239A7164C420600CCF28A /* StoryBoards */,
 				294604C91645B29E00146B0C /* Data */,
 				294604CA1645B2BA00146B0C /* Controller */,
 				29EE26531650A1A600A00CD5 /* Map */,
@@ -222,7 +227,12 @@
 		294604C91645B29E00146B0C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				293A5038165AD5C7003BD924 /* DrunkFoodNYC.sqlite */,
+				296AD4051659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld */,
+				299779441648AF6100E5B79B /* CoreDateHelper.h */,
+				299779451648AF6100E5B79B /* CoreDateHelper.m */,
 				291239A6164C41E800CCF28A /* Data Classes */,
+				293A5040165B108F003BD924 /* Img */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -236,8 +246,6 @@
 				294604C11645AEC300146B0C /* ChooseTableViewController.m */,
 				299779481648B1AF00E5B79B /* myCustomCell.h */,
 				299779491648B1AF00E5B79B /* myCustomCell.m */,
-				299779441648AF6100E5B79B /* CoreDateHelper.h */,
-				299779451648AF6100E5B79B /* CoreDateHelper.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ChooseTableViewController.h"
+#import <iAd/iAd.h>
+
 @interface FoodChooseViewController : UIViewController<CLLocationManagerDelegate>{
 
 }
 
 @property (nonatomic, strong) NSString *  selectedFood;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet ADBannerView *ad;
 
 - (IBAction)Food1Btn:(id)sender;
 - (IBAction)Food2Btn:(id)sender;
