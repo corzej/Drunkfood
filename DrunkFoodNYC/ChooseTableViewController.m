@@ -107,8 +107,6 @@
     NSDate *now = [NSDate date];
     int openClose;
     int weekday = [self checkDay:now];
-    
-    NSLog(@"when do you close: %f", [[object valueForKey:@"monC"]doubleValue] );
 
     switch (weekday) {
         case 1:
@@ -196,7 +194,7 @@
 
 }
 
-#pragma makr - nextview
+#pragma makr - nextview label
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     MapViewController *detailViewController = [segue destinationViewController];
@@ -209,6 +207,8 @@
     
     detailViewController.zoomLocation =abc;
     detailViewController.storeName = [object valueForKey:@"name"];
+    detailViewController.storeTelNum = [object valueForKey:@"phoneNum" ];
+    detailViewController.addr =[object valueForKey:@"physicalAdd"];
 
 }
 

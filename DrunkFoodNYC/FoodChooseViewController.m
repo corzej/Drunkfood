@@ -14,6 +14,8 @@
 
 @implementation FoodChooseViewController
 @synthesize selectedFood, locationManager;
+@synthesize ad;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,12 +45,14 @@
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 220, 30)];
     titleLabel.textColor = [UIColor redColor];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.text =@"Drunk Food";
+    titleLabel.text =@"DRUNK FOOD";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [titleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:21]];
     [titleLabel sizeToFit];
 
     [self.navigationItem setTitleView:titleLabel];
+    
+    ad.delegate =self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,13 +61,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-
+    if (!([segue.identifier isEqualToString:@"toRT"])) {
         ChooseTableViewController *detailViewController = [segue destinationViewController];
         detailViewController.recieveInfo = selectedFood;
         detailViewController.navTitle = selectedFood;
-    
+    }
 }
 
 
@@ -94,6 +98,9 @@
 }
 - (IBAction)Food9Btn:(id)sender {
     selectedFood = @"Halal";
+}
+
+- (IBAction)aboutUsBtn:(id)sender {
 }
 
 

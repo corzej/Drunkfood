@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		29030E4D1654834D001D2056 /* Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 29030E4C1654834D001D2056 /* Pizza.png */; };
+		292BF40816613A7D000516F6 /* FullMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292BF40716613A7D000516F6 /* FullMapViewController.m */; };
+		292BF40D16619BF6000516F6 /* Fast Food.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40A16619BF6000516F6 /* Fast Food.png */; };
+		292BF40E16619BF6000516F6 /* Hot Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40B16619BF6000516F6 /* Hot Dog.png */; };
+		292BF40F16619BF6000516F6 /* Vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40C16619BF6000516F6 /* Vegetarian.png */; };
+		292BF4241662B7D8000516F6 /* DrunkFoodNYC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */; };
 		2933BC2A16542CFF002B9C4E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933BC2916542CFF002B9C4E /* MapViewController.m */; };
-		293A5039165AD5C7003BD924 /* DrunkFoodNYC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 293A5038165AD5C7003BD924 /* DrunkFoodNYC.sqlite */; };
 		293A503B165ADE8D003BD924 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A503A165ADE8D003BD924 /* iAd.framework */; };
 		2946048C16448A3700146B0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2946048B16448A3700146B0C /* UIKit.framework */; };
 		2946048E16448A3700146B0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2946048D16448A3700146B0C /* Foundation.framework */; };
@@ -45,9 +49,14 @@
 
 /* Begin PBXFileReference section */
 		29030E4C1654834D001D2056 /* Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pizza.png; sourceTree = "<group>"; };
+		292BF40616613A7D000516F6 /* FullMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullMapViewController.h; sourceTree = "<group>"; };
+		292BF40716613A7D000516F6 /* FullMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullMapViewController.m; sourceTree = "<group>"; };
+		292BF40A16619BF6000516F6 /* Fast Food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fast Food.png"; sourceTree = "<group>"; };
+		292BF40B16619BF6000516F6 /* Hot Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hot Dog.png"; sourceTree = "<group>"; };
+		292BF40C16619BF6000516F6 /* Vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vegetarian.png; sourceTree = "<group>"; };
+		292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DrunkFoodNYC.sqlite; sourceTree = "<group>"; };
 		2933BC2816542CFF002B9C4E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2933BC2916542CFF002B9C4E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		293A5038165AD5C7003BD924 /* DrunkFoodNYC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DrunkFoodNYC.sqlite; sourceTree = "<group>"; };
 		293A503A165ADE8D003BD924 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2946048716448A3700146B0C /* DrunkFoodNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrunkFoodNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2946048B16448A3700146B0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -164,6 +173,9 @@
 			children = (
 				2985852C1656B57A00F4E917 /* Chinese_Korean.png */,
 				2985852D1656B57A00F4E917 /* Falafel.png */,
+				292BF40A16619BF6000516F6 /* Fast Food.png */,
+				292BF40B16619BF6000516F6 /* Hot Dog.png */,
+				292BF40C16619BF6000516F6 /* Vegetarian.png */,
 				29030E4C1654834D001D2056 /* Pizza.png */,
 			);
 			name = Img;
@@ -230,7 +242,7 @@
 		294604C91645B29E00146B0C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				293A5038165AD5C7003BD924 /* DrunkFoodNYC.sqlite */,
+				292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */,
 				296AD4051659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld */,
 				299779441648AF6100E5B79B /* CoreDateHelper.h */,
 				299779451648AF6100E5B79B /* CoreDateHelper.m */,
@@ -258,6 +270,8 @@
 			children = (
 				2933BC2816542CFF002B9C4E /* MapViewController.h */,
 				2933BC2916542CFF002B9C4E /* MapViewController.m */,
+				292BF40616613A7D000516F6 /* FullMapViewController.h */,
+				292BF40716613A7D000516F6 /* FullMapViewController.m */,
 				29E59851165B68EC002877E8 /* MapPin.h */,
 				29E59852165B68EC002877E8 /* MapPin.m */,
 			);
@@ -323,7 +337,10 @@
 				29030E4D1654834D001D2056 /* Pizza.png in Resources */,
 				2985852E1656B57A00F4E917 /* Chinese_Korean.png in Resources */,
 				2985852F1656B57A00F4E917 /* Falafel.png in Resources */,
-				293A5039165AD5C7003BD924 /* DrunkFoodNYC.sqlite in Resources */,
+				292BF40D16619BF6000516F6 /* Fast Food.png in Resources */,
+				292BF40E16619BF6000516F6 /* Hot Dog.png in Resources */,
+				292BF40F16619BF6000516F6 /* Vegetarian.png in Resources */,
+				292BF4241662B7D8000516F6 /* DrunkFoodNYC.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +369,7 @@
 				296AD41F1659A44400E28562 /* Hfh.m in Sources */,
 				296AD4221659A44400E28562 /* Friedchicken.m in Sources */,
 				29E59853165B68EC002877E8 /* MapPin.m in Sources */,
+				292BF40816613A7D000516F6 /* FullMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +409,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -412,7 +430,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

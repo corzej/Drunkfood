@@ -10,7 +10,7 @@
 #import "ChooseTableViewController.h"
 #import <iAd/iAd.h>
 
-@interface FoodChooseViewController : UIViewController<CLLocationManagerDelegate>{
+@interface FoodChooseViewController : UIViewController<CLLocationManagerDelegate,ADBannerViewDelegate>{
 
 }
 
@@ -27,5 +27,6 @@
 - (IBAction)Food7Btn:(id)sender;
 - (IBAction)Food8Btn:(id)sender;
 - (IBAction)Food9Btn:(id)sender;
+- (IBAction)aboutUsBtn:(id)sender;
 
 @end

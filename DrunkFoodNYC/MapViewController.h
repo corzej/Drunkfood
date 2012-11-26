@@ -18,4 +18,12 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, assign) CLLocationCoordinate2D zoomLocation;
 @property (nonatomic, assign) NSString * storeName;
+@property (nonatomic, assign) NSString * storeTelNum;
+@property (nonatomic, assign) NSString * addr;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *storeNmaeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *telNumbLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addrLabel;
+
 @end
