@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="70" id="fdK-Gu-jXb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" image="TACO.png">
+                                <state key="normal" image="Mexican.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -432,13 +432,10 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS6-rm-Lji">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="6ZD-ep-cFB"/>
+                                    <constraint firstAttribute="height" constant="331" id="HKc-86-yyq"/>
                                 </constraints>
                             </mapView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-rm-gy6">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="rW2-Lw-1gc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -463,12 +460,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18293795620437955" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="IS6-rm-Lji" firstAttribute="top" secondItem="3gF-h6-tDJ" secondAttribute="top" constant="66" id="2vS-17-0aH"/>
                             <constraint firstItem="ZJu-rm-gy6" firstAttribute="trailing" secondItem="IS6-rm-Lji" secondAttribute="trailing" type="default" id="82o-an-vOd"/>
                             <constraint firstItem="ZJu-rm-gy6" firstAttribute="top" secondItem="hsh-Ag-bTF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Aha-KF-Q30"/>
-                            <constraint firstItem="hsh-Ag-bTF" firstAttribute="centerX" secondItem="3gF-h6-tDJ" secondAttribute="centerX" type="default" id="EMN-uo-ppW"/>
                             <constraint firstItem="hsh-Ag-bTF" firstAttribute="leading" secondItem="ZJu-rm-gy6" secondAttribute="leading" type="default" id="FNK-Ff-rzo"/>
-                            <constraint firstItem="IS6-rm-Lji" firstAttribute="top" secondItem="ZJu-rm-gy6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hl8-H9-70D"/>
-                            <constraint firstItem="IS6-rm-Lji" firstAttribute="bottom" secondItem="3gF-h6-tDJ" secondAttribute="bottom" type="default" id="Yye-BU-Lro"/>
+                            <constraint firstItem="IS6-rm-Lji" firstAttribute="top" secondItem="ZJu-rm-gy6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wtr-UC-ysI"/>
+                            <constraint firstItem="IS6-rm-Lji" firstAttribute="centerX" secondItem="3gF-h6-tDJ" secondAttribute="centerX" type="default" id="eBk-aW-GQ8"/>
+                            <constraint firstItem="hsh-Ag-bTF" firstAttribute="top" secondItem="3gF-h6-tDJ" secondAttribute="top" constant="7" id="gCc-Jt-sXT"/>
                             <constraint firstItem="IS6-rm-Lji" firstAttribute="leading" secondItem="ZJu-rm-gy6" secondAttribute="leading" type="default" id="mnh-ZX-G4U"/>
                             <constraint firstItem="hsh-Ag-bTF" firstAttribute="trailing" secondItem="ZJu-rm-gy6" secondAttribute="trailing" type="default" id="wOa-9I-5PH"/>
                         </constraints>
@@ -514,58 +512,10 @@
         <image name="Fried Chicken.png" width="350" height="420"/>
         <image name="Halal.png" width="364" height="436"/>
         <image name="Hot Dog.png" width="358" height="389"/>
+        <image name="Mexican.png" width="296" height="359"/>
         <image name="Pizza.png" width="392" height="546"/>
-        <image name="TACO.png" width="366" height="186"/>
         <image name="Vegetarian.png" width="305" height="399"/>
     </resources>
-    <classes>
-        <class className="ChooseTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChooseTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ad" candidateClass="ADBannerView"/>
-                <relationship kind="outlet" name="myTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="FoodChooseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodChooseViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="Food1Btn:"/>
-                <relationship kind="action" name="Food2Btn:"/>
-                <relationship kind="action" name="Food3Btn:"/>
-                <relationship kind="action" name="Food4Btn:"/>
-                <relationship kind="action" name="Food5Btn:"/>
-                <relationship kind="action" name="Food6Btn:"/>
-                <relationship kind="action" name="Food7Btn:"/>
-                <relationship kind="action" name="Food8Btn:"/>
-                <relationship kind="action" name="Food9Btn:"/>
-                <relationship kind="action" name="aboutUsBtn:"/>
-                <relationship kind="outlet" name="ad" candidateClass="ADBannerView"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="touchBtn:"/>
-                <relationship kind="outlet" name="addrLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="storeNmaeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="telNumbBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="myCustomCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/myCustomCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="areaLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="closeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="openCloseLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="storeNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

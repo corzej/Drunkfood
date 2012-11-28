@@ -43,7 +43,8 @@
 	// Do any additional setup after loading the view.
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 220, 30)];
-    titleLabel.textColor = [UIColor colorWithRed:181/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0];
+    titleLabel.textColor = [UIColor whiteColor];
+    //titleLabel.textColor = [UIColor colorWithRed:181/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text =@"DRUNK FOOD";
     titleLabel.textAlignment = NSTextAlignmentCenter;

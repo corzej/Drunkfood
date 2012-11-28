@@ -79,7 +79,7 @@
 
     //name of kind of food
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 30)];
-    titleLabel.textColor = [UIColor colorWithRed:181/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0];
+    titleLabel.textColor = [UIColor whiteColor];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text =storeName;
     titleLabel.textAlignment = NSTextAlignmentCenter;
