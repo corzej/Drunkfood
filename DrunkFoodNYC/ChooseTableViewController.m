@@ -57,7 +57,7 @@
 
 //name of kind of food
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 250, 30)];
-    titleLabel.textColor = [UIColor redColor];
+    titleLabel.textColor = [UIColor colorWithRed:181/255.0 green:34.0/255.0 blue:34.0/255.0 alpha:1.0];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text =navTitle;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -150,10 +150,11 @@
             cell.closeLabel.text =@"CLOSE";
             break;
         case 3:
-            cell.openCloseLabel.textColor = [UIColor blueColor];
+
+            cell.openCloseLabel.textColor = [UIColor colorWithRed:89.0/255.0 green:141.0/255.0 blue:191.0/255.0 alpha:1.0];
             cell.openCloseLabel.text = @"OPEN";
-            cell.closeLabel.textColor = [UIColor blueColor];
-            cell.closeLabel.text =@"24 hours";
+            cell.closeLabel.textColor = [UIColor colorWithRed:89.0/255.0 green:141.0/255.0 blue:191.0/255.0 alpha:1.0];
+            cell.closeLabel.text =@"24 HRS";
             break;
         default:
             break;
@@ -207,7 +208,8 @@
     
     detailViewController.zoomLocation =abc;
     detailViewController.storeName = [object valueForKey:@"name"];
-    detailViewController.storeTelNum = [object valueForKey:@"phoneNum" ];
+    detailViewController.storeTelNum = [object valueForKey:@"phoneNum"];
+    detailViewController.areaName = [object valueForKey:@"area"];
     detailViewController.addr =[object valueForKey:@"physicalAdd"];
 
 }

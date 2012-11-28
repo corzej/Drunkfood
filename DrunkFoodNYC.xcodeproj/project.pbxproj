@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		29030E4D1654834D001D2056 /* Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 29030E4C1654834D001D2056 /* Pizza.png */; };
 		292BF40816613A7D000516F6 /* FullMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292BF40716613A7D000516F6 /* FullMapViewController.m */; };
-		292BF40D16619BF6000516F6 /* Fast Food.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40A16619BF6000516F6 /* Fast Food.png */; };
 		292BF40E16619BF6000516F6 /* Hot Dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40B16619BF6000516F6 /* Hot Dog.png */; };
 		292BF40F16619BF6000516F6 /* Vegetarian.png in Resources */ = {isa = PBXBuildFile; fileRef = 292BF40C16619BF6000516F6 /* Vegetarian.png */; };
-		292BF4241662B7D8000516F6 /* DrunkFoodNYC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */; };
 		2933BC2A16542CFF002B9C4E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2933BC2916542CFF002B9C4E /* MapViewController.m */; };
 		293A503B165ADE8D003BD924 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293A503A165ADE8D003BD924 /* iAd.framework */; };
 		2946048C16448A3700146B0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2946048B16448A3700146B0C /* UIKit.framework */; };
@@ -28,6 +26,15 @@
 		294604AE16448D3200146B0C /* Storyboard_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294604AD16448D3200146B0C /* Storyboard_iphone.storyboard */; };
 		294604C21645AEC300146B0C /* ChooseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294604C11645AEC300146B0C /* ChooseTableViewController.m */; };
 		294604C51645AF9800146B0C /* FoodChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294604C41645AF9800146B0C /* FoodChooseViewController.m */; };
+		2954E59616644136006202DC /* Halal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E59516644136006202DC /* Halal.png */; };
+		2954E59B16644150006202DC /* Launch Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E59A16644150006202DC /* Launch Image.png */; };
+		2954E59D16644158006202DC /* Fast Food2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E59C16644158006202DC /* Fast Food2.png */; };
+		2954E5EB1665C1A0006202DC /* Icon 114pix.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E5EA1665C1A0006202DC /* Icon 114pix.png */; };
+		2954E5F11665C3E4006202DC /* DINER.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E5EE1665C3E3006202DC /* DINER.png */; };
+		2954E5F21665C3E4006202DC /* Fried Chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E5EF1665C3E3006202DC /* Fried Chicken.png */; };
+		2954E5F71665C713006202DC /* DrunkFoodNYC.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2954E5F61665C712006202DC /* DrunkFoodNYC.sqlite */; };
+		2954E6011665C7D6006202DC /* TACO.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E6001665C7D5006202DC /* TACO.png */; };
+		2954E6051665C9A4006202DC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2954E6031665C9A4006202DC /* Default@2x.png */; };
 		296AD4071659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 296AD4051659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld */; };
 		296AD40A1659A42C00E28562 /* Taco.m in Sources */ = {isa = PBXBuildFile; fileRef = 296AD4091659A42C00E28562 /* Taco.m */; };
 		296AD40D1659A44300E28562 /* Fastfood.m in Sources */ = {isa = PBXBuildFile; fileRef = 296AD40C1659A44300E28562 /* Fastfood.m */; };
@@ -51,10 +58,8 @@
 		29030E4C1654834D001D2056 /* Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pizza.png; sourceTree = "<group>"; };
 		292BF40616613A7D000516F6 /* FullMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullMapViewController.h; sourceTree = "<group>"; };
 		292BF40716613A7D000516F6 /* FullMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullMapViewController.m; sourceTree = "<group>"; };
-		292BF40A16619BF6000516F6 /* Fast Food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fast Food.png"; sourceTree = "<group>"; };
 		292BF40B16619BF6000516F6 /* Hot Dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hot Dog.png"; sourceTree = "<group>"; };
 		292BF40C16619BF6000516F6 /* Vegetarian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vegetarian.png; sourceTree = "<group>"; };
-		292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DrunkFoodNYC.sqlite; sourceTree = "<group>"; };
 		2933BC2816542CFF002B9C4E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2933BC2916542CFF002B9C4E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		293A503A165ADE8D003BD924 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -77,6 +82,15 @@
 		294604C11645AEC300146B0C /* ChooseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTableViewController.m; sourceTree = "<group>"; };
 		294604C31645AF9800146B0C /* FoodChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodChooseViewController.h; sourceTree = "<group>"; };
 		294604C41645AF9800146B0C /* FoodChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodChooseViewController.m; sourceTree = "<group>"; };
+		2954E59516644136006202DC /* Halal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Halal.png; sourceTree = "<group>"; };
+		2954E59A16644150006202DC /* Launch Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Image.png"; sourceTree = "<group>"; };
+		2954E59C16644158006202DC /* Fast Food2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fast Food2.png"; sourceTree = "<group>"; };
+		2954E5EA1665C1A0006202DC /* Icon 114pix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon 114pix.png"; sourceTree = "<group>"; };
+		2954E5EE1665C3E3006202DC /* DINER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DINER.png; sourceTree = "<group>"; };
+		2954E5EF1665C3E3006202DC /* Fried Chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fried Chicken.png"; sourceTree = "<group>"; };
+		2954E5F61665C712006202DC /* DrunkFoodNYC.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DrunkFoodNYC.sqlite; sourceTree = "<group>"; };
+		2954E6001665C7D5006202DC /* TACO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TACO.png; sourceTree = "<group>"; };
+		2954E6031665C9A4006202DC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		296AD4061659A3A000E28562 /* DrunkFoodNYC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrunkFoodNYC.xcdatamodel; sourceTree = "<group>"; };
 		296AD4081659A42C00E28562 /* Taco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Taco.h; sourceTree = "<group>"; };
 		296AD4091659A42C00E28562 /* Taco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Taco.m; sourceTree = "<group>"; };
@@ -171,12 +185,17 @@
 		293A5040165B108F003BD924 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				2954E5EE1665C3E3006202DC /* DINER.png */,
+				2954E5EF1665C3E3006202DC /* Fried Chicken.png */,
 				2985852C1656B57A00F4E917 /* Chinese_Korean.png */,
 				2985852D1656B57A00F4E917 /* Falafel.png */,
-				292BF40A16619BF6000516F6 /* Fast Food.png */,
+				2954E59516644136006202DC /* Halal.png */,
+				2954E6001665C7D5006202DC /* TACO.png */,
+				2954E59A16644150006202DC /* Launch Image.png */,
 				292BF40B16619BF6000516F6 /* Hot Dog.png */,
 				292BF40C16619BF6000516F6 /* Vegetarian.png */,
 				29030E4C1654834D001D2056 /* Pizza.png */,
+				2954E59C16644158006202DC /* Fast Food2.png */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -184,6 +203,8 @@
 		2946047C16448A3700146B0C = {
 			isa = PBXGroup;
 			children = (
+				2954E5EA1665C1A0006202DC /* Icon 114pix.png */,
+				2954E6031665C9A4006202DC /* Default@2x.png */,
 				2946049316448A3700146B0C /* DrunkFoodNYC */,
 				2946048A16448A3700146B0C /* Frameworks */,
 				2946048816448A3700146B0C /* Products */,
@@ -242,7 +263,7 @@
 		294604C91645B29E00146B0C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				292BF4231662B7D8000516F6 /* DrunkFoodNYC.sqlite */,
+				2954E5F61665C712006202DC /* DrunkFoodNYC.sqlite */,
 				296AD4051659A3A000E28562 /* DrunkFoodNYC.xcdatamodeld */,
 				299779441648AF6100E5B79B /* CoreDateHelper.h */,
 				299779451648AF6100E5B79B /* CoreDateHelper.m */,
@@ -337,10 +358,17 @@
 				29030E4D1654834D001D2056 /* Pizza.png in Resources */,
 				2985852E1656B57A00F4E917 /* Chinese_Korean.png in Resources */,
 				2985852F1656B57A00F4E917 /* Falafel.png in Resources */,
-				292BF40D16619BF6000516F6 /* Fast Food.png in Resources */,
 				292BF40E16619BF6000516F6 /* Hot Dog.png in Resources */,
 				292BF40F16619BF6000516F6 /* Vegetarian.png in Resources */,
-				292BF4241662B7D8000516F6 /* DrunkFoodNYC.sqlite in Resources */,
+				2954E59616644136006202DC /* Halal.png in Resources */,
+				2954E59B16644150006202DC /* Launch Image.png in Resources */,
+				2954E59D16644158006202DC /* Fast Food2.png in Resources */,
+				2954E5EB1665C1A0006202DC /* Icon 114pix.png in Resources */,
+				2954E5F11665C3E4006202DC /* DINER.png in Resources */,
+				2954E5F21665C3E4006202DC /* Fried Chicken.png in Resources */,
+				2954E5F71665C713006202DC /* DrunkFoodNYC.sqlite in Resources */,
+				2954E6011665C7D6006202DC /* TACO.png in Resources */,
+				2954E6051665C9A4006202DC /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
