@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mzV-eT-42a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mzV-eT-42a">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
+        <!--On Off View Controller-->
+        <scene sceneID="7Dq-wb-1Ih">
+            <objects>
+                <viewController id="gXF-7u-Rdc" customClass="OnOffViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6A-i9-T9v">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTO-HA-rfU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="hEk-90-NcW"/>
+                                    <constraint firstAttribute="height" constant="36" id="vzt-M7-DlY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-0L-BNf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="6TT-YZ-0F7"/>
+                                    <constraint firstAttribute="height" constant="42" id="KmE-Dw-3vR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.35022026210000001" green="0.55299356460000004" blue="0.75079719389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You are not yet approved for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-VJ-WWV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="eKK-q8-hKU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.2288491433" green="0.70784837369999998" blue="0.1164272861" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="store Owner. Send us email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBY-3C-4Uz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="bMM-zq-DPZ"/>
+                                    <constraint firstAttribute="width" constant="254" id="zwU-U6-3b4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.2288491433" green="0.70784837369999998" blue="0.1164272861" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3J-z8-FNm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PBY-3C-4Uz" firstAttribute="trailing" secondItem="w6A-i9-T9v" secondAttribute="trailing" type="default" id="5Ce-SD-9i2"/>
+                            <constraint firstItem="eTO-HA-rfU" firstAttribute="top" secondItem="RJn-0L-BNf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BNK-5T-59T"/>
+                            <constraint firstAttribute="trailing" secondItem="d3J-z8-FNm" secondAttribute="trailing" constant="72" id="Da3-3W-luY"/>
+                            <constraint firstItem="d3J-z8-FNm" firstAttribute="top" secondItem="w6A-i9-T9v" secondAttribute="top" constant="205" id="I8S-xw-NYz"/>
+                            <constraint firstItem="PBY-3C-4Uz" firstAttribute="top" secondItem="w6A-i9-T9v" secondAttribute="top" constant="157" id="LNr-8L-djR"/>
+                            <constraint firstItem="eTO-HA-rfU" firstAttribute="leading" secondItem="w6A-i9-T9v" secondAttribute="leading" constant="82" id="Ujb-6f-dOG"/>
+                            <constraint firstItem="RJn-0L-BNf" firstAttribute="top" secondItem="w6A-i9-T9v" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fZW-95-yH8"/>
+                            <constraint firstItem="RJn-0L-BNf" firstAttribute="leading" secondItem="w6A-i9-T9v" secondAttribute="leading" constant="42" id="qN9-tT-G5r"/>
+                            <constraint firstItem="8QR-VJ-WWV" firstAttribute="leading" secondItem="RJn-0L-BNf" secondAttribute="leading" type="default" id="wCV-4r-aZ8"/>
+                            <constraint firstItem="8QR-VJ-WWV" firstAttribute="top" secondItem="w6A-i9-T9v" secondAttribute="top" constant="133" id="zOM-o5-UMn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SHi-Ln-WDg"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="ownerLabel" destination="d3J-z8-FNm" id="H8m-eR-Ge3"/>
+                        <outlet property="userNameLabel" destination="eTO-HA-rfU" id="cNZ-kr-gZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pav-WS-8GP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-649"/>
+        </scene>
         <!--Food Choose View Controller-->
         <scene sceneID="wWD-4O-xIF">
             <objects>
@@ -190,7 +264,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLC-Hb-Bas">
-                        <barButtonItem key="rightBarButtonItem" title="RT" id="5Tm-yh-Knc">
+                        <barButtonItem key="leftBarButtonItem" image="onoff.png" id="aCH-zx-Fkc">
+                            <connections>
+                                <action selector="loginBtnAction:" destination="s5V-P5-k3Z" id="yJW-PS-YI3"/>
+                                <segue destination="gXF-7u-Rdc" kind="push" identifier="toLogin" id="A8Q-Vh-mZd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="navBar_rollintiger.png" id="5Tm-yh-Knc">
                             <connections>
                                 <action selector="aboutUsBtn:" destination="s5V-P5-k3Z" id="n5Y-L6-pdB"/>
                                 <segue destination="iDB-wy-F45" kind="push" identifier="toRT" id="5dM-jp-MZE"/>
@@ -201,12 +281,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1D-EG-tDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="98"/>
+            <point key="canvasLocation" x="720" y="98"/>
         </scene>
-        <!--View Controller-->
+        <!--Rollin Tiger View Controller-->
         <scene sceneID="Ed2-dR-ki6">
             <objects>
-                <viewController id="iDB-wy-F45" sceneMemberID="viewController">
+                <viewController id="iDB-wy-F45" customClass="RollinTigerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ssD-cn-jnF">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +363,19 @@
                                 <color key="textColor" red="0.34901960780000002" green="0.55294117649999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtL-2C-fjC">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testBtnPress:" destination="iDB-wy-F45" eventType="touchUpInside" id="jE9-U5-tOg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -302,6 +395,8 @@
                             <constraint firstItem="ZM7-d8-Ch3" firstAttribute="trailing" secondItem="Ihm-7O-2Ea" secondAttribute="trailing" type="default" id="nDB-So-15k"/>
                             <constraint firstItem="7dv-Vk-N1X" firstAttribute="top" secondItem="ssD-cn-jnF" secondAttribute="top" type="default" id="oeu-8p-faH"/>
                             <constraint firstItem="arX-jR-eyf" firstAttribute="centerX" secondItem="hoF-aL-l9K" secondAttribute="centerX" type="default" id="prZ-JW-HrE"/>
+                            <constraint firstAttribute="bottom" secondItem="wtL-2C-fjC" secondAttribute="bottom" constant="157" id="qOo-yj-xcQ"/>
+                            <constraint firstAttribute="trailing" secondItem="wtL-2C-fjC" secondAttribute="trailing" constant="28" id="rNE-Im-py7"/>
                             <constraint firstAttribute="bottom" secondItem="noO-ni-Tps" secondAttribute="bottom" constant="41" id="tUE-Ia-CEu"/>
                         </constraints>
                     </view>
@@ -414,10 +509,6 @@
                 <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mNX-I3-HvT">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <requiredContentSizeIdentifiers>
-                        <string>ADBannerContentSizeLandscape</string>
-                        <string>ADBannerContentSizePortrait</string>
-                    </requiredContentSizeIdentifiers>
                 </adBannerView>
             </objects>
             <point key="canvasLocation" x="1265" y="98"/>
@@ -515,6 +606,8 @@
         <image name="Mexican.png" width="296" height="359"/>
         <image name="Pizza.png" width="392" height="546"/>
         <image name="Vegetarian.png" width="305" height="399"/>
+        <image name="navBar_rollintiger.png" width="30" height="30"/>
+        <image name="onoff.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

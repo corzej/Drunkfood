@@ -28,5 +28,6 @@
 - (IBAction)Food8Btn:(id)sender;
 - (IBAction)Food9Btn:(id)sender;
 - (IBAction)aboutUsBtn:(id)sender;
+- (IBAction)loginBtnAction:(id)sender;
 
 @end

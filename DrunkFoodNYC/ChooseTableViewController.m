@@ -243,7 +243,7 @@
 	if(entitySearchPredicate == nil)
 	{
 		// Use the CoreDataHelper class to get all objects of the given
-		// type sorted by the "Name" key
+		// type sorted by the "sortName" key
 		NSMutableArray* mutableFetchResults = [CoreDateHelper getObjectsFromContext: recieveInfo :sortName :YES :context];
         
 		self.entityArray = mutableFetchResults;

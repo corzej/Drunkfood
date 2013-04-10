@@ -64,7 +64,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if (!([segue.identifier isEqualToString:@"toRT"])) {
+    if (!([segue.identifier isEqualToString:@"toRT"] || [segue.identifier isEqualToString:@"toLogin"])) {
         ChooseTableViewController *detailViewController = [segue destinationViewController];
         detailViewController.recieveInfo = selectedFood;
         detailViewController.navTitle = selectedFood;
@@ -102,6 +102,9 @@
 }
 
 - (IBAction)aboutUsBtn:(id)sender {
+}
+
+- (IBAction)loginBtnAction:(id)sender {
 }
 
 
